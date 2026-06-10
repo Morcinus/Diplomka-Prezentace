@@ -1,0 +1,14 @@
+{
+  "name": "CTU FIT Presentation (LaTeX)",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "james-yu.latex-workshop",
+        "streetsidesoftware.code-spell-checker-czech",
+        "streetsidesoftware.code-spell-checker",
+        "aaron-bond.better-comments"
+      ]
+    }
+  }
+}

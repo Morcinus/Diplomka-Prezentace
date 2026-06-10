@@ -1,0 +1,120 @@
+{
+  "latex-workshop.docker.enabled": false,
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-shell-escape",
+        "-output-driver=xdvipdfmx -z 0",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": ["%DOCFILE%"],
+      "env": {}
+    },
+    {
+      "name": "arara",
+      "command": "arara",
+      "args": ["%DOC%"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex (CTU)",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "xelatex -> biber -> xelatex",
+      "tools": ["xelatex", "biber", "xelatex"]
+    },
+    {
+      "name": "arara",
+      "tools": ["arara"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "xelatex (CTU)",
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.rootFile.useSubFile": false,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.tempDir": "%DIR%/.latex-workshop",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.zoom": "page-width",
+  "latex-workshop.message.error.show": true,
+  "latex-workshop.message.warning.show": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.bcf",
+    "*.run.xml",
+    "*.fdb_latexmk",
+    "*.synctex.gz",
+    "*.fls",
+    "*.log",
+    "*.nav",
+    "*.snm",
+    "*.vrb"
+  ],
+  "cSpell.language": "en,cs",
+  "better-comments.tags": [
+    {
+      "tag": "write",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "review",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "done",
+      "color": "#bd00ba",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "final",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "cSpell.words": ["ctufit", "arara", "biber", "xelatex", "biblatex"],
+  "cSpell.enabled": true,
+  "cSpell.ignorePaths": ["settings.json"]
+}
