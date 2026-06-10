@@ -49,31 +49,50 @@
 \titlepage
 \end{frame}
 
-% Write - tenhle slide možná vyřadit?
-%\section*{Obsah}
-%\subsection*{Obsah}
-%\begin{frame}
-%\frametitle{Obsah}
-%\tableofcontents
-%\end{frame}
-
 % Done
 \section{Úvod}
 \subsection*{Motivace}
 \begin{frame}
 \frametitle{Motivace}
 \begin{itemize}
-\item Neuspokojivé aplikace na výuku angličtiny
-\begin{itemize}
-    \item Efektivita učení
-    \item Zábavnost učení
-    \item Přizpůsobitelnost učení
+    \item Zaměření
+    \begin{itemize}
+        \item Efektivita učení
+        \item Dlouhodobá udržitelnost učení
+        \item Motivace k učení
+    \end{itemize}
+    \item Bakalářská práce
+    \begin{itemize}
+        \item Aplikace na výuku angličtiny
+    \end{itemize}
 \end{itemize}
-\item Rozdělení projektu
+\end{frame}
+
+\subsection*{Vznik projektu}
+\begin{frame}
+\frametitle{Vznik projektu}
 \begin{itemize}
-    \item Frontend
-    \item Backend
+    \item Důvody vzniku projektu
+    \begin{itemize}
+        \item Snadnost učení % v autobuse atd.
+        \item Forma učení % krátká videa se cvičeními
+        \item Motivace uživatelů % sociální aspekty, gamifikace, soutěže, sbírání znalostí (vidění pokroku)
+        \item Opakování látky
+        \item Kvalitní uživatelská zkušenost % studijní plány, doporučování lekcí a obsahu
+    \end{itemize}
 \end{itemize}
+\end{frame}
+
+\subsection*{Struktura projektu}
+\begin{frame}
+\frametitle{Struktura projektu}
+\begin{itemize}
+    \item Projekt vycházel z existující aplikace na výuku angličtiny
+    \item Rozdělení projektu
+    \begin{itemize}
+        \item Frontend webové aplikace na učení se programování
+        \item Backend webové aplikace na učení se programování
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -83,14 +102,14 @@
 \frametitle{Cíle práce}
 \begin{enumerate}
 \item Hlavní cíl: Vytvoření a nasazení frontendu aplikace
-\begin{itemize}
-\item Analýza
-\item Návrh
-\item Implementace
-\item Testování
-\item Nasazení
-\item Zhodnocení
-\end{itemize}
+    \begin{itemize}
+        \item Analýza
+        \item Návrh
+        \item Implementace
+        \item Testování
+        \item Nasazení
+        \item Zhodnocení
+    \end{itemize}
 \end{enumerate}
 \end{frame}
 
@@ -100,15 +119,16 @@
 \begin{frame}
 \frametitle{Analýza}
 \begin{enumerate}
+    \item Analýza stávající aplikace
     \item Analýza existujících řešení
     \begin{itemize}
         \item Použitelnost, učení, motivace, silné a slabé stránky
-        \item Duolingo, Mondly, Busuu, Babbel
+        \item Codecademy, Sololearn, Mimo, Scrimba
     \end{itemize}
     \item Požadavky aplikace
     \begin{itemize}
-        \item Funkční požadavky
-        \item Nefunkční požadavky
+        \item Funkční požadavky % 35
+        \item Nefunkční požadavky % 7
     \end{itemize}
 \end{enumerate}
 \end{frame}
@@ -118,34 +138,41 @@
 \begin{frame}
 \frametitle{Návrh}
 \begin{columns}
-\begin{column}[c]{4cm}
+\begin{column}[c]{5cm}
 \begin{enumerate}
 \item Případy užití
-\item Návrh uživatelského rozhraní
-\item Výběr technologií
+\item Návrh vzhledu uživatelského rozhraní % typografie, barvy
+\item Návrh prototypu uživatelského rozhraní
+\item Návrh architektury aplikace
 \end{enumerate}
 \end{column}
-\begin{column}[c]{6cm}
+\begin{column}[c]{5cm}
 \begin{figure}[c]
 \begin{center}
-\includegraphics[width=2.9cm]{pic/homepage.png}
+\includegraphics[width=2.9cm]{pic/study-session.png}
 \end{center}
-\caption{Návrh stránky kurzu}
+\caption{Návrh stránky cvičení}
 \end{figure}
 \end{column}
 \end{columns}
 \end{frame}
 
-% Write - tady bych teoreticky ještě mohl přidat jeden slide s dvěma obrázky - lekce a volba témat
+% Write - tady bych teoreticky ještě mohl přidat jeden slide s dvěma obrázky
 
 % Done
 \subsection*{Implementace}
 \begin{frame}
 \frametitle{Implementace}
 \begin{itemize}
-    \item Celý návrh byl implementován
+    \item Kompletní implementace návrhu
     \item React, Next.js a TypeScript % tohle teoreticky můžu vyřadit
-    \item Vytvořen Mock API
+    \item Vybrané funkce
+    \begin{itemize}
+        \item Interaktivní forma učení
+        \item PWA
+        \item Notifikace
+        \item Žebříčky uživatelů
+    \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -155,15 +182,19 @@
 \frametitle{Testování}
 \begin{itemize}
     \item Manuální testování
-    \begin{enumerate}
-        \item Komponenty
-        \item Funkce a stránky s mock API
-        \item Funkce a stránky s backend API
-    \end{enumerate}
+    \begin{itemize}
+        \item Komponenty a funkce
+        \item Funkce v testovacím prostředí
+    \end{itemize}
+    \item End-to-end testování
+    \begin{itemize}
+        \item Pokryty všechny případy užití
+        \item Playwright, Cucumber, Gherkin
+    \end{itemize}
     \item Testování použitelnosti
     \begin{itemize}
         \item 5 účastníků
-        \item Objeveny příležitosti pro zlepšení UI
+        \item Nalezeny příležitosti pro zdokonalení UI
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -173,8 +204,9 @@
 \begin{frame}
 \frametitle{Nasazení}
 \begin{itemize}
-    \item Testovací prostředí využívající mock REST API
-    \item Produkční prostředí využívající backend API
+    \item Testovací prostředí \texttt{dev}
+    \item Testovací prostředí \texttt{stage}
+    \item Produkční prostředí \texttt{prod}
     \item Aplikace je připravena k provozu
 \end{itemize}
 \end{frame}
@@ -225,6 +257,21 @@
 \begin{block}{Otázka 1}
     Nezkoušel jste z Figmy pomocí AI rovnou vygenerovat celou funkční aplikaci? Jak to případně dopadlo?
 \end{block}
+
+\begin{exampleblock}{Odpověď}
+    \begin{itemize}
+        \item Vysoká kvalita generovaného kódu
+        \item Detailní návrh uživatelského rozhraní
+        \item Detailní specifikace scénářů pomocí jazyka Gherkin
+        \begin{itemize}
+            \item Implementace s využitím MCP serveru
+            \item End-to-end testování s využitím Cucumber frameworku
+            \item Průběžné testování
+        \end{itemize}
+        \item Častá potřeba zásahu vývojáře
+        \item Vyšší kvalita aplikace
+    \end{itemize}
+\end{exampleblock}
 \end{frame}
 
 \end{document}
